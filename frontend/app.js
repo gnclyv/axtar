@@ -4,10 +4,7 @@
 // and renders the AI's geolocation prediction on a Leaflet map.
 
 // Əgər lokal fayl kimi açılıbsa belə, mütləq localhost:8000 portuna yönləndiririk
-const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-  ? "http://localhost:8000"
-  : (window.location.protocol === "file:" ? "http://127.0.0.1:8000" : "");
-
+const API_BASE_URL = window.location.origin;
 const ANALYZE_ENDPOINT = `${API_BASE_URL}/api/analyze`;
 
 // --- DOM references -------------------------------------------------------
